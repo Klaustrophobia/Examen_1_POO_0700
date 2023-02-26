@@ -1,4 +1,4 @@
-
+from classes.Career import Career
 
 class Dataprocess:
 
@@ -10,6 +10,7 @@ class Dataprocess:
         # Crea la coleccion Careers
         if "Careers" not in db.list_collection_names():
             db.create_collection("Careers")
+        
 
         return True
     
