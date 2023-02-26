@@ -1,3 +1,5 @@
+
+
 class Dataprocess:
 
     def __init__(self, data):
@@ -9,29 +11,20 @@ class Dataprocess:
         if "Careers" not in db.list_collection_names():
             db.create_collection("Careers")
 
-        #
-        careers = []
-        for career_data in self.__data['carrera']:
-            careers.append({
-                'carrera': career_data['carrera']
-            })
-        
-        if len(careers) > 0:
-            db.Careers.inser_many(careers)
-
         return True
+    
     def create_courses(self,db):
         ## Do something to create courses on your mongodb collection using __data
           # Crea la coleccion Courses
-        if "Courses" not in db.list_collection_names():
+        if "Student" not in db.list_collection_names():
             db.create_collection("Courses")
 
         return True
     def create_students(self,db):
         ## Do something to create students on your mongodb collection using __data
           # Crea la coleccion Courses
-        if "Courses" not in db.list_collection_names():
-            db.create_collection("Courses")
+        if "Student" not in db.list_collection_names():
+            db.create_collection("Student")
 
         return True
     def create_enrollments(self,db):

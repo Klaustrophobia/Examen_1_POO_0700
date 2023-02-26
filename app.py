@@ -1,5 +1,5 @@
 import pymongo
-from classes import DATA, Dataprocess, DbMongo, Careers, Courses, Enrollments, Student
+from classes import DATA, Course, Dataprocess, DbMongo, Career, Enrollments, Student
 from dotenv import load_dotenv
 
 
@@ -14,10 +14,10 @@ def main():
     pipeline.create_careers(db)
     
     #Student
-    #pipeline.create_students(db)
+    pipeline.create_students(db)
     
     #Enrollments
-    #pipeline.create_enrollments(db)
+    pipeline.create_enrollments(db)
 
     return True
 
