@@ -14,15 +14,15 @@ def main():
     pipeline.create_careers(db)
     
     #Student
-    #pipeline.create_students()
+    #pipeline.create_students(db)
     
     #Enrollments
-    #pipeline.create_enrollments()
+    #pipeline.create_enrollments(db)
 
     return True
 
     client.close()
-
+    print ("Conexion Exitosa")
 
 if __name__ == "__main__":
     load_dotenv()
