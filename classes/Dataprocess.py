@@ -5,17 +5,17 @@ class Dataprocess:
 
     def create_careers(self, db):
         ## Do something to create careers on your mongodb collection using __data
-        #     
-        db.create_collection("students")
+        # Crea la coleccion Careers
+        # db.create_collection("Careers")
 
         #
-        students = self.__data['estudiantes']
-        for student in students:
-            student_document = {
-                'nombre': student['nombre'],
-                'carrera': student['carrera']
+        carreras = self.__data[1]['carrera']
+        for career_data in carreras:
+            career_document = {
+                'carrera': career_data['carrera'],
             }
-        db.student.insert_one(student_document)
+            #Inserta el documento en la coleccion Careers
+            db.careers.insert_one(career_document)
         return True
     def create_courses(self):
         ## Do something to create courses on your mongodb collection using __data
