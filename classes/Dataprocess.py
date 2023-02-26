@@ -1,5 +1,5 @@
 from classes.Career import Career
-
+from classes.Course import Course
 class Dataprocess:
 
     def __init__(self, data):
@@ -10,7 +10,6 @@ class Dataprocess:
         # Crea la coleccion Careers
         if "Careers" not in db.list_collection_names():
             db.create_collection("Careers")
-        
 
         return True
     
