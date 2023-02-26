@@ -20,15 +20,23 @@ class Dataprocess:
             db.Careers.inser_many(careers)
 
         return True
-    def create_courses(self):
+    def create_courses(self,db):
         ## Do something to create courses on your mongodb collection using __data
+          # Crea la coleccion Courses
+        if "Courses" not in db.list_collection_names():
+            db.create_collection("Courses")
 
         return True
-    def create_students(self):
+    def create_students(self,db):
         ## Do something to create students on your mongodb collection using __data
+          # Crea la coleccion Courses
+        if "Courses" not in db.list_collection_names():
+            db.create_collection("Courses")
 
         return True
-    def create_enrollments(self):
+    def create_enrollments(self,db):
         ## Do something to create enrollments on your mongodb collection using __data
+        if "Enrollments" not in db.list_collection_names():
+            db.create_collection("Enrollments")
         
         return True
