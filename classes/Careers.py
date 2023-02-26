@@ -4,15 +4,14 @@ from classes.data import DATA
 class Careers:
     def __init__(self, nombre):
         self.nombre = nombre
-    
-    def get_dict(db):
-        collection = db["Careers"]
-        career = collection.find
+        self.carrera = []
 
-        dict_careers = {}
-        for e in career:
-            dict_careers[e["nombre"]] = e["_id"]
+    def add_career(self, carrera):
+        self.carrera.append(carrera)
 
-        
-        return dict_careers
+    def remove_course(self, carrera):
+        self.carrera.remove(carrera)
+
+    def get_courses(self):
+        return self.carrera
     
